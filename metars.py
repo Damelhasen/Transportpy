@@ -23,8 +23,10 @@ def airport_info(station_icao):
     url = "https://aviationweather.gov/api/data/airport"
     params = {"ids": station_icao, "format": "json"}
     response = requests.get(url, params=params)
+    global data
     data = response.json()
-    print(data)
+    return data[0]
+    
 
 def intro():
     print(r"""
@@ -83,16 +85,27 @@ while mode == 2 :
     
 while mode == 3 :
     station_icao = input("Enter the ICAO code of the station: ").strip().upper() 
-    url = "https://aviationweather.gov/api/data/airport"
-    params = {"ids": "station_icao", "format": "json"}
-    params["ids"] = station_icao 
-    response = requests.get(url, params=params)
-    data = response.json()
-    print(data)
+    airport = airport_info(station_icao)
+    elevation = airport["elev"]
+    name      = airport["name"]
+    icao      = airport["icaoId"]
+    lat       = airport["lat"]
+    lon       = airport["lon"]
+    tower     = airport["tower"]
+    freqs     = airport["freqs"]
+    
     try:
         clear_terminal()
-        result = urllib.request.urlopen(url).read().decode('utf-8')
-        print(result)
+        print(f"Airport: {name}")
+        print(f"ICAO: {icao}")
+        print(f"Latitude: {lat}")
+        print(f"Longitude: {lon}")
+        print(f"Elevation: {elevation}")
+        print(f"Tower: {tower}")
+        print(f"Frequencies: {freqs}")
+        for runway in airport['runways']:
+            print(f"  {runway['id']}  —  {runway['dimension']} ft  —  Surface: {runway['surface']}")
+        
     except urllib.error.HTTPError:
         clear_terminal()
         print("Error fetching data. Please check the ICAO code and try again.")
