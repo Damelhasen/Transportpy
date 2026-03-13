@@ -103,10 +103,15 @@ while mode == 3 :
         print(f"Elevation: {elevation}")
         print(f"Tower: {tower}")
         print(f"Frequencies: {freqs}")
+        print()
         for runway in airport['runways']:
             print(f"  {runway['id']}  —  {runway['dimension']} ft  —  Surface: {runway['surface']}")
-        
+        print()
+        print()
+        result = urllib.request.urlopen(f"https://tgftp.nws.noaa.gov/data/observations/metar/decoded/{station_icao}.TXT").read().decode('utf-8')
+        print(result)
     except urllib.error.HTTPError:
-        clear_terminal()
+        
         print("Error fetching data. Please check the ICAO code and try again.")
         result = None
+    
