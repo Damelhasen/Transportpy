@@ -50,7 +50,7 @@ def intro():
 
 
 
-clear_terminal
+clear_terminal()
 intro()
 while mode == 1 :
     clear_terminal()
