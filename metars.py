@@ -46,7 +46,7 @@ def intro():
 
     print("Welcome To Johan's NavBuddy")
     global mode
-    mode = int(input("1. Raw METAR\n2. Decoded METAR\nSelect option (1 or 2): ").strip())
+    mode = int(input("1. Raw METAR\n2. Decoded METAR\n3.Full Airport Information\nSelect option (1,2 or 3): ").strip())
 
 
 
