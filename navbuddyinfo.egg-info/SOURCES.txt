@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+navbuddy/__init__.py
+navbuddy/navbuddy.py
+navbuddyinfo.egg-info/PKG-INFO
+navbuddyinfo.egg-info/SOURCES.txt
+navbuddyinfo.egg-info/dependency_links.txt
+navbuddyinfo.egg-info/entry_points.txt
+navbuddyinfo.egg-info/requires.txt
+navbuddyinfo.egg-info/top_level.txt

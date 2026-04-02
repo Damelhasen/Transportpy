@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: navbuddyinfo
+Version: 0.1.6
+Summary: Aviation METAR and airport information tool
+Author-email: Johan <jotheexplorer123@gmail.com>
+Project-URL: Homepage, https://github.com/Damelhasen/Transportpy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+WELCOME TO NAVBUDDY ITS A SIMPLE AVIATION TOOL THAT LETS YOU LOOKUP METARS AND OTHER AIRPORT INFOS
+FOR AERODROMES IN THE U.S AND CANADA !
+
+
+
+
+
+
+***AI USED FOR AUTOCOMPLETE AND TROUBLE SHOOTING***

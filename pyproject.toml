@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "navbuddyinfo"
+version = "0.1.6"
+description = "Aviation METAR and airport information tool"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+]
+
+[[project.authors]]
+name = "Johan"
+email = "jotheexplorer123@gmail.com"
+
+[project.urls]
+Homepage = "https://github.com/Damelhasen/Transportpy"
+
+[project.scripts]
+navbuddyinfo = "navbuddy.navbuddy:main"
